@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.10.0">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2026-02-12T20:41:27+00:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">ML and Data Science with Duvan</title><subtitle>Machine Learning, LoRA fine-tuning, metrics, and real-world data systems.</subtitle><entry><title type="html">Welcome — What this blog is about</title><link href="http://localhost:4000/2026/02/12/welcome.html" rel="alternate" type="text/html" title="Welcome — What this blog is about" /><published>2026-02-12T00:00:00+00:00</published><updated>2026-02-12T00:00:00+00:00</updated><id>http://localhost:4000/2026/02/12/welcome</id><content type="html" xml:base="http://localhost:4000/2026/02/12/welcome.html"><![CDATA[<p>This blog is my structured notebook on ML, Data Engineering, and LoRA fine-tuning.</p>
-
-<p>What to expect:</p>
-<ul>
-  <li>clear explanations</li>
-  <li>practical code</li>
-  <li>research notes</li>
-</ul>]]></content><author><name></name></author><summary type="html"><![CDATA[This blog is my structured notebook on ML, Data Engineering, and LoRA fine-tuning.]]></summary></entry></feed>
