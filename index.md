@@ -1,6 +1,5 @@
 ---
 layout: home
-title: ""
 ---
 
 # ML and Data Science with Duvan
