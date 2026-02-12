@@ -15,3 +15,9 @@ minima:
     - { platform: github,  user_url: "https://github.com/duvi-m" }
     - { platform: linkedin, user_url: "https://www.linkedin.com/in/YOUR_LINKEDIN/" }
     - { platform: youtube,  user_url: "https://www.youtube.com/@YOUR_CHANNEL" }
+    
+minima:
+  skin: classic
+
+sass:
+  style: compressed
