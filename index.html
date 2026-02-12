@@ -5,9 +5,14 @@ permalink: /
 ---
 
 <div class="hero">
-  <div class="hero-badge">Research · Engineering · Practical ML</div>
 
-  <h1 class="hero-title">ML and Data Science with Duvan</h1>
+  <div class="hero-badge">
+    Research · Engineering · Practical ML
+  </div>
+
+  <h1 class="hero-title">
+    ML and Data Science with Duvan
+  </h1>
 
   <p class="hero-subtitle">
     Machine Learning Researcher &amp; Data Engineer<br/>
@@ -26,20 +31,42 @@ permalink: /
     <span class="tag">ETL</span>
     <span class="tag">Kaggle</span>
   </div>
+
 </div>
 
-<p>LIQUID_TEST: {{ 2 | plus: 2 }}</p>
-## Start here
-- **Projects:** see what I’m building → /projects
-- **Roadmap:** my learning path and checkpoints → /roadmap
-- **Resources:** curated links (YouTube, books, papers) → /resources
+<hr class="section-divider"/>
 
-## Latest posts
+<h2>Start here</h2>
+
+<ul>
+  <li>
+    <strong>Projects:</strong> see what I’m building →
+    <a href="/projects/">/projects</a>
+  </li>
+  <li>
+    <strong>Roadmap:</strong> my learning path and checkpoints →
+    <a href="/roadmap/">/roadmap</a>
+  </li>
+  <li>
+    <strong>Resources:</strong> curated links (YouTube, books, papers) →
+    <a href="/resources/">/resources</a>
+  </li>
+</ul>
+
+<hr class="section-divider"/>
+
+<h2>Latest Posts</h2>
+
 <ul class="post-list">
 {% for post in site.posts limit:5 %}
-  <li>
-    <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span><br>
-    <a class="post-link" href="{{ post.url }}">{{ post.title }}</a>
+  <li class="post-card">
+    <span class="post-meta">
+      {{ post.date | date: "%b %-d, %Y" }}
+    </span>
+    <br>
+    <a class="post-link" href="{{ post.url }}">
+      {{ post.title }}
+    </a>
   </li>
 {% endfor %}
 </ul>
