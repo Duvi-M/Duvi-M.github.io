@@ -95,3 +95,83 @@ a:hover{
   text-align: center;
   color: var(--muted) !important;
 }
+/* HERO (Home) */
+.hero{
+  margin-top: 18px;
+  padding: 26px 24px;
+  border: 1px solid rgba(35,48,74,.85);
+  background: rgba(18,26,47,.55);
+  border-radius: 18px;
+}
+
+.hero-badge{
+  display: inline-block;
+  font-size: 13px;
+  color: var(--muted);
+  border: 1px solid rgba(35,48,74,.85);
+  background: rgba(15,23,42,.65);
+  padding: 6px 10px;
+  border-radius: 999px;
+}
+
+.hero-title{
+  margin: 14px 0 10px;
+  font-size: 56px;
+  line-height: 1.05;
+}
+
+.hero-subtitle{
+  margin: 0;
+  color: var(--muted);
+  font-size: 18px;
+}
+
+.hero-actions{
+  margin-top: 16px;
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.btn{
+  display: inline-block;
+  padding: 10px 14px;
+  border-radius: 12px;
+  font-weight: 700;
+  text-decoration: none !important;
+  border: 1px solid rgba(35,48,74,.85);
+}
+
+.btn-primary{
+  background: rgba(122,162,255,.18);
+  color: var(--text) !important;
+}
+
+.btn-primary:hover{
+  background: rgba(122,162,255,.28);
+}
+
+.btn-secondary{
+  background: rgba(18,26,47,.65);
+  color: var(--text) !important;
+}
+
+.btn-secondary:hover{
+  background: rgba(18,26,47,.85);
+}
+
+.hero-tags{
+  margin-top: 14px;
+  display:flex;
+  gap:8px;
+  flex-wrap: wrap;
+}
+
+.tag{
+  font-size: 12px;
+  color: var(--muted);
+  padding: 6px 10px;
+  border-radius: 999px;
+  border: 1px solid rgba(35,48,74,.85);
+  background: rgba(15,23,42,.65);
+}
