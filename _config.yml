@@ -1,0 +1,17 @@
+title: "ML and Data Science with Duvan"
+description: "Machine Learning, LoRA fine-tuning, metrics, and real-world data systems."
+url: "https://duvi-m.github.io"
+
+theme: minima
+
+header_pages:
+  - projects.md
+  - roadmap.md
+  - resources.md
+  - about.md
+
+minima:
+  social_links:
+    - { platform: github,  user_url: "https://github.com/duvi-m" }
+    - { platform: linkedin, user_url: "https://www.linkedin.com/in/YOUR_LINKEDIN/" }
+    - { platform: youtube,  user_url: "https://www.youtube.com/@YOUR_CHANNEL" }
