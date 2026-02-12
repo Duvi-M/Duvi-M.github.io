@@ -1,6 +1,7 @@
 ---
-layout: home
+layout: page
 title: ""
+permalink: /
 ---
 
 <div class="hero">
@@ -31,3 +32,13 @@ title: ""
 - **Projects:** see what I’m building → /projects
 - **Roadmap:** my learning path and checkpoints → /roadmap
 - **Resources:** curated links (YouTube, books, papers) → /resources
+
+## Latest posts
+<ul class="post-list">
+{% raw %}{% for post in site.posts limit:5 %}{% endraw %}
+  <li>
+    <span class="post-meta">{% raw %}{{ post.date | date: "%b %-d, %Y" }}{% endraw %}</span><br>
+    <a class="post-link" href="{% raw %}{{ post.url }}{% endraw %}">{% raw %}{{ post.title }}{% endraw %}</a>
+  </li>
+{% raw %}{% endfor %}{% endraw %}
+</ul>
