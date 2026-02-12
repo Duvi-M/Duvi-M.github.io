@@ -35,10 +35,10 @@ permalink: /
 
 ## Latest posts
 <ul class="post-list">
-{% raw %}{% for post in site.posts limit:5 %}{% endraw %}
+{% for post in site.posts limit:5 %}
   <li>
-    <span class="post-meta">{% raw %}{{ post.date | date: "%b %-d, %Y" }}{% endraw %}</span><br>
-    <a class="post-link" href="{% raw %}{{ post.url }}{% endraw %}">{% raw %}{{ post.title }}{% endraw %}</a>
+    <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span><br>
+    <a class="post-link" href="{{ post.url }}">{{ post.title }}</a>
   </li>
-{% raw %}{% endfor %}{% endraw %}
+{% endfor %}
 </ul>
