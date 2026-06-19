@@ -1,5 +1,5 @@
-title: "ML and Data Science with Duvan"
-description: "Machine Learning, LoRA fine-tuning, metrics, and real-world data systems."
+title: "Duvan Mendoza Ortega"
+description: "Machine Learning Engineer focused on NLP, LLM systems, LoRA fine-tuning, and backend AI infrastructure."
 url: "https://duvi-m.github.io"
 
 theme: minima
@@ -14,8 +14,7 @@ minima:
   skin: classic
   social_links:
     - { platform: github,  user_url: "https://github.com/duvi-m" }
-    - { platform: linkedin, user_url: "https://www.linkedin.com/in/YOUR_LINKEDIN/" }
-    - { platform: youtube,  user_url: "https://www.youtube.com/@YOUR_CHANNEL" }
+    - { platform: linkedin, user_url: "https://www.linkedin.com/in/duvan-mendoza-ortega-87bb57321" }
 
 sass:
   style: compressed
