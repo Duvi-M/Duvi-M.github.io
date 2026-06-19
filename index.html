@@ -32,6 +32,7 @@
         <a href="#about">About</a>
         <a href="#technical-core">Technical Core</a>
         <a href="#experience">Experience</a>
+        <a href="#showcase">Showcase</a>
         <a href="#projects">Projects</a>
         <a href="#academic">Academic</a>
         <a href="#contact">Contact</a>
@@ -188,6 +189,118 @@
         </div>
       </section>
 
+      <section id="showcase" class="section-shell showcase-section">
+          <div class="section-heading reveal">
+            <p class="eyebrow">Featured Engineering Work</p>
+            <h2>Research-grade LoRA tooling presented like a product system.</h2>
+          </div>
+
+          <div class="showcase-layout">
+            <article class="showcase-main reveal">
+              <div class="showcase-topline">
+                <span class="showcase-icon" aria-hidden="true">⚡</span>
+                <span>Transformer Fine-tuning · PEFT Research · NLP</span>
+              </div>
+
+              <div class="showcase-copy">
+                <h3>DULoRA</h3>
+                <p class="showcase-subtitle">Dynamic Utility-based LoRA Rank Allocation</p>
+                <p>
+                  Research-oriented ML pipeline for dynamic rank allocation in LoRA-based
+                  transformer fine-tuning. It compares fixed-rank LoRA with adaptive
+                  layer-wise rank allocation using gradient-derived utility scores,
+                  producing reproducible metrics, plots, allocation history, and trained
+                  model artifacts.
+                </p>
+              </div>
+
+              <div class="showcase-tags" aria-label="DULoRA technology tags">
+                <span>Python</span>
+                <span>PyTorch</span>
+                <span>Hugging Face</span>
+                <span>PEFT</span>
+                <span>LoRA</span>
+                <span>QLoRA</span>
+                <span>Transformers</span>
+                <span>scikit-learn</span>
+              </div>
+
+              <figure class="code-window" aria-label="DULoRA rank allocation code preview">
+                <figcaption>
+                  <span class="window-dot"></span>
+                  <span class="window-dot"></span>
+                  <span class="window-dot"></span>
+                  <strong>src/rank_allocator.py</strong>
+                </figcaption>
+                <pre><code><span class="code-key">def</span> <span class="code-fn">allocate_ranks</span>(layer_scores, total_budget, min_rank=2, max_rank=8, step=2):
+    rank_pattern = {layer: min_rank <span class="code-key">for</span> layer <span class="code-key">in</span> layer_scores}
+    used_budget = len(rank_pattern) * min_rank
+    history = []
+
+    <span class="code-key">while</span> used_budget + step &lt;= total_budget:
+        best_layer = <span class="code-fn">max</span>(
+            (layer <span class="code-key">for</span> layer, score <span class="code-key">in</span> layer_scores.items()
+             <span class="code-key">if</span> rank_pattern[layer] + step &lt;= max_rank),
+            key=layer_scores.get,
+            default=<span class="code-none">None</span>,
+        )
+        <span class="code-key">if</span> best_layer <span class="code-key">is</span> <span class="code-none">None</span>:
+            <span class="code-key">break</span>
+
+        rank_pattern[best_layer] += step
+        used_budget += step
+        history.append({<span class="code-str">"layer"</span>: best_layer, <span class="code-str">"rank"</span>: rank_pattern[best_layer]})
+
+    <span class="code-key">return</span> rank_pattern, history</code></pre>
+              </figure>
+
+              <div class="showcase-metrics" aria-label="DULoRA internal capabilities">
+                <div>
+                  <span aria-hidden="true">⚡</span>
+                  <strong>Adaptive Ranks</strong>
+                  <p>Layer-wise rank pattern under a fixed budget.</p>
+                </div>
+                <div>
+                  <span aria-hidden="true">📊</span>
+                  <strong>Layer Utility</strong>
+                  <p>Gradient-derived scores normalized for allocation.</p>
+                </div>
+                <div>
+                  <span aria-hidden="true">🧬</span>
+                  <strong>PEFT Pipeline</strong>
+                  <p>Baseline LoRA compared against adaptive LoRA.</p>
+                </div>
+                <div>
+                  <span aria-hidden="true">📁</span>
+                  <strong>Experiment Artifacts</strong>
+                  <p>Metrics, plots, rank heatmaps, and history files.</p>
+                </div>
+              </div>
+            </article>
+
+            <aside class="showcase-side" aria-label="Related engineering areas">
+              <article class="showcase-side-card reveal">
+                <span>01</span>
+                <h3>LLM / RAG Systems</h3>
+                <p>Document understanding, retrieval workflows, context construction, structured extraction, and LLM-assisted answers.</p>
+                <small>RAG · Embeddings · Vector Search · FastAPI</small>
+              </article>
+              <article class="showcase-side-card reveal">
+                <span>02</span>
+                <h3>Backend AI APIs</h3>
+                <p>Production-oriented API services for AI workflows, authentication, structured outputs, async tasks and integrations.</p>
+                <small>FastAPI · SQLAlchemy · Docker · PostgreSQL</small>
+              </article>
+              <article class="showcase-side-card reveal">
+                <span>03</span>
+                <h3>Data &amp; ML Pipelines</h3>
+                <p>Data cleaning, feature engineering, model evaluation, reproducible experiments and analytical workflows.</p>
+                <small>pandas · NumPy · scikit-learn · SQL</small>
+              </article>
+            </aside>
+          </div>
+      </section>
+
       <section id="projects" class="section-shell">
         <div class="section-heading reveal">
           <p class="eyebrow">Selected Projects</p>
@@ -259,6 +372,49 @@
             </div>
             <a class="project-stack" href="https://github.com/Duvi-M/Project-SQL-Data-Warehouse" target="_blank" rel="noopener">SQL Server · ETL · Repo</a>
           </article>
+        </div>
+      </section>
+
+      <section id="activity" class="section-shell activity-section">
+        <div class="activity-panel reveal">
+          <div class="activity-header">
+            <div>
+              <p class="eyebrow">Development Activity</p>
+              <h2>Portfolio activity map</h2>
+              <p>Visual activity snapshot inspired by contribution graphs.</p>
+            </div>
+            <a class="button" href="https://github.com/Duvi-M" target="_blank" rel="noopener" aria-label="View Duvan Mendoza Ortega GitHub profile">View Profile →</a>
+          </div>
+
+          <div class="activity-meta">
+            <span>github.com/Duvi-M</span>
+            <span>Static visualization · not live GitHub API data</span>
+          </div>
+
+          <div class="activity-grid" aria-label="Static portfolio activity map">
+            <span class="level-1"></span><span class="level-0"></span><span class="level-2"></span><span class="level-3"></span><span class="level-1"></span><span class="level-0"></span><span class="level-4"></span>
+            <span class="level-2"></span><span class="level-1"></span><span class="level-3"></span><span class="level-0"></span><span class="level-2"></span><span class="level-4"></span><span class="level-1"></span>
+            <span class="level-0"></span><span class="level-3"></span><span class="level-2"></span><span class="level-1"></span><span class="level-4"></span><span class="level-2"></span><span class="level-0"></span>
+            <span class="level-4"></span><span class="level-2"></span><span class="level-1"></span><span class="level-3"></span><span class="level-0"></span><span class="level-2"></span><span class="level-3"></span>
+            <span class="level-1"></span><span class="level-4"></span><span class="level-2"></span><span class="level-0"></span><span class="level-3"></span><span class="level-1"></span><span class="level-2"></span>
+            <span class="level-3"></span><span class="level-1"></span><span class="level-4"></span><span class="level-2"></span><span class="level-1"></span><span class="level-0"></span><span class="level-3"></span>
+            <span class="level-2"></span><span class="level-0"></span><span class="level-1"></span><span class="level-4"></span><span class="level-3"></span><span class="level-2"></span><span class="level-1"></span>
+            <span class="level-0"></span><span class="level-2"></span><span class="level-3"></span><span class="level-1"></span><span class="level-4"></span><span class="level-2"></span><span class="level-0"></span>
+            <span class="level-1"></span><span class="level-3"></span><span class="level-4"></span><span class="level-2"></span><span class="level-0"></span><span class="level-1"></span><span class="level-3"></span>
+            <span class="level-4"></span><span class="level-2"></span><span class="level-1"></span><span class="level-0"></span><span class="level-3"></span><span class="level-4"></span><span class="level-2"></span>
+            <span class="level-2"></span><span class="level-1"></span><span class="level-0"></span><span class="level-3"></span><span class="level-4"></span><span class="level-1"></span><span class="level-2"></span>
+            <span class="level-0"></span><span class="level-4"></span><span class="level-3"></span><span class="level-1"></span><span class="level-2"></span><span class="level-3"></span><span class="level-0"></span>
+          </div>
+
+          <div class="activity-legend" aria-label="Activity intensity legend">
+            <span>Less</span>
+            <i class="level-0"></i>
+            <i class="level-1"></i>
+            <i class="level-2"></i>
+            <i class="level-3"></i>
+            <i class="level-4"></i>
+            <span>More</span>
+          </div>
         </div>
       </section>
 
