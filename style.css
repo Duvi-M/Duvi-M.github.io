@@ -110,7 +110,7 @@ a{
 .brand{
   display: inline-flex;
   align-items: center;
-  gap: 7px;
+  gap: 0;
   font-weight: 800;
   letter-spacing: -.03em;
 }
@@ -355,7 +355,6 @@ a{
 #showcase,
 #projects,
 #experience,
-#academic,
 #education,
 #activity,
 #contact{
@@ -768,6 +767,10 @@ a{
   background: rgba(2, 6, 23, .4);
 }
 
+.activity-grid.is-loading .activity-cell{
+  animation: activityPulse 1.2s ease-in-out infinite alternate;
+}
+
 .activity-grid-wrap{
   max-width: 100%;
   overflow-x: auto;
@@ -819,6 +822,25 @@ a{
 .activity-legend i{
   width: 11px;
   height: 11px;
+}
+
+.activity-message{
+  margin: 0;
+  padding: 18px;
+  border: 1px solid rgba(148, 163, 184, .12);
+  border-radius: 14px;
+  color: var(--muted);
+  background: rgba(2, 6, 23, .4);
+  font-size: 14px;
+}
+
+@keyframes activityPulse{
+  from{
+    opacity: .35;
+  }
+  to{
+    opacity: .85;
+  }
 }
 
 .timeline{
@@ -890,6 +912,13 @@ a{
   border-color: var(--border-strong);
   background: rgba(45, 212, 191, .08);
   color: var(--text);
+}
+
+.contact-actions{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 18px;
 }
 
 .site-footer{
