@@ -99,8 +99,8 @@
         cell.setAttribute("aria-hidden", "true");
       } else {
         cell.setAttribute("role", "img");
-        cell.setAttribute("aria-label", key + ": " + count + " public GitHub events");
-        cell.title = key + " · " + count + " public events";
+        cell.setAttribute("aria-label", key + ": " + count + " recent public GitHub events");
+        cell.title = key + " · " + count + " recent public events";
       }
       grid.appendChild(cell);
     });
