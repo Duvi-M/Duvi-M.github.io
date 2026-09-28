@@ -43,6 +43,13 @@
     link.addEventListener("click", closeNav);
   });
 
+  document.addEventListener("keydown", function(event){
+    if (event.key === "Escape" && document.body.classList.contains("nav-open")) {
+      closeNav();
+      if (toggle) toggle.focus();
+    }
+  });
+
   if ("IntersectionObserver" in window) {
     var revealObserver = new IntersectionObserver(function(entries){
       entries.forEach(function(entry){
